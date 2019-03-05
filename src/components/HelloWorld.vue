@@ -54,7 +54,7 @@
               <p class="mb-1">{{item.description}}</p>
               <div style="margin-top: 20px;">
                 <b-button variant="danger" v-on:click="remove(index)">Remove</b-button>
-                <b-button variant="success" v-on:click="statusChange(index)">Done</b-button>
+                <b-button v-if="checkStatus(index)" variant="success" v-on:click="statusChange(index)">Done</b-button>
               </div>
             </b-list-group-item>
           </div>
@@ -101,7 +101,6 @@ export default {
       switch (actualState) {
         case "warning":
           this.toDoList[index].status = "success"
-          console.log(this.toDoList[index].status)
           break
 
         case "success":
@@ -109,6 +108,20 @@ export default {
           break
         default:
         // code block
+      }
+    },
+    checkStatus(index) {
+      const actualState = this.toDoList[index].status;
+
+      switch (actualState) {
+        case "warning":
+          return true
+          break
+
+        case "success":
+          return false
+          break
+        default:
       }
     }
   }
