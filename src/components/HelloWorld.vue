@@ -50,8 +50,9 @@
                 <h3 class="mb-1">{{item.title}}</h3>
                 <small>{{item.date}}</small>
               </div>
-
-              <p class="mb-1">{{item.description}}</p>
+              <div>
+                <p class="mb-1">{{item.description}}</p>
+              </div>
               <div style="margin-top: 20px;">
                 <b-button variant="danger" v-on:click="remove(index)">Remove</b-button>
                 <b-button v-if="checkStatus(index)" variant="success" v-on:click="statusChange(index)">Done</b-button>
@@ -61,6 +62,11 @@
         </b-list-group>
       </div>
     </div>
+    <footer>
+      <p>This webapp was made by: Ricardo Lucas</p>
+      <p>GitHub: <a href="https://github.com/ricardolucas18/toDoList_webapp">
+        ricardolucas18</a>.</p>
+    </footer>
   </div>
 </template>
 
