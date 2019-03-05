@@ -1,10 +1,10 @@
 /* eslint-disable */
 <template>
   <div class="hello">
-    <h1>{{ pageTitle }}</h1>
+    <h1 style="margin-top: 50px;">{{ pageTitle }}</h1>
     <div>
       <div>
-        <div style="margin: 100px;">
+        <div style="margin: 50px;">
           <b-card>
             <div class="row">
               <div class="col-md-12">
@@ -24,7 +24,7 @@
                       <b-form-textarea
                         id="tododescription"
                         v-model="description"
-                        placeholder="EX: I have to read page 34 and solve the exercises on page 35"
+                        placeholder="EX: I have to read page 34 and solve the exercises on page 35."
                         rows="3"
                         max-rows="6"
                       />
